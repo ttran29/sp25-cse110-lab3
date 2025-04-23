@@ -11,7 +11,6 @@ body {
 }
 
 /* element selector */
-
 h1 {
   color: rgb(80,0,67); /* showing colors for using red, gree, blue, alpha values */
   font-size: 2.5rem;
@@ -45,12 +44,12 @@ nav a:hover {
   background-color: red;
 }
 
-button::active {
+button:active {
   background-color: aqua;
 }
 
 h5 {
-  color: color(display-p3 .6 .6 .1); /* using wider gamut color */
+  color: #999900; /* fallback for display-p3 */
   font-size: 1rem;
   margin-top: 10px;
 }
@@ -66,7 +65,7 @@ header {
 
 /* id selector */
 #attendance {
-  color: color-mix(in lab, rgb(143, 174, 235) 50%, white 50%); /* using wider gamut color */
+  color: #9FB2E0; /* fallback for color-mix */
   font-size: .9em;
   margin: 20px auto 20px auto; /* using auto margins */
   line-height: 2rem; /* using relative units */
@@ -139,7 +138,6 @@ footer {
 #E8B7D4
 #A5678E */
 
-
 .grid-example {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -179,7 +177,6 @@ h1, h2 {
   background-color: aliceblue;
 }
 
-
 /* descendant selector */
 header h1 {
   text-decoration: underline;
@@ -189,7 +186,6 @@ header h1 {
 section > h3 {
   background-color: purple;
 }
-
 
 /* general sibling selector */
 h1 ~ h3 {
@@ -206,12 +202,10 @@ header h2 {
   color: black;
 }
 
-
 /* :has() */
 section:has(h3){
   opacity: .8;
 }
-
 
 /* nested selector */
 body > header {
