@@ -1,0 +1,170 @@
+* {
+  background-color: #7FACD6; /* using colors using hex codes and also using the background color */
+  font-family: 'Crimson Text', serif;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(80,0,67); /* showing colors for using red, gree, blue, alpha values */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: hsl(274, 70%, 56%); /* using hsl color */
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex; /* ✅ flexbox */
+  justify-content: space-around; /* ✅ flexbox */
+  align-items: center; /* ✅ flexbox */
+  gap: 20px; /* ✅ flexbox */
+  margin: 20px 0;
+}
+nav a {
+  color: pink; /* using color name */
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  color: darkgrey;
+  background-color: red;
+}
+
+button::active {
+  background-color: aqua;
+}
+
+h5 {
+  color: color(display-p3 .6 .6 .1); /* using wider gamut color */
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+header {
+  width: 400px;
+  border: 5px solid #A5678E;
+  padding: 20px; /* using absolute units */
+  position: relative; /* using position */
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#attendance {
+  color: color-mix(in lab, rgb(143, 174, 235) 50%, white 50%); /* using wider gamut color */
+  font-size: .9em;
+  margin: 20px auto 20px auto; /* using auto margins */
+  line-height: 2rem; /* using relative units */
+  padding: 20px;
+  max-width: 800px;
+}
+
+#content {
+  --text-color: #33539E; 
+  color: var(--text-color, darkslategray); /* using css variables and fallbacks */
+  margin: 20px auto; /* using margins */
+  padding: 20px;
+  border-style: solid;
+  border-color: white;
+  border-width: 10px;
+  border-radius: 20px; /* using borders */
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#todo {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px; /* using padding */
+  text-decoration:line-through; /*using text decorations */
+  text-align: left; /* using text align */
+  display: block; /* using display */
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+#todo h3 {
+  display:inline;
+  text-decoration:overline; 
+  font-size: 1.2rem;
+}
+
+#todo p {
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+}
+
+img {
+  /* do sizing */
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+video {
+  position: relative;
+  width: 300px;
+  margin: 40px auto 0 auto;
+  display: block;
+}
+
+footer {
+  position: sticky;
+}
+
+/* #33539E
+#7FACD6
+#BFB8DA
+#E8B7D4
+#A5678E */
+
+
+.grid-example {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 10px; 
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.grid-example div {
+  background-color: #b33881;
+  padding: 10px;
+  grid-column: span 1;
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  header, #content, #attendance, #todo {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
